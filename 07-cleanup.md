@@ -9,6 +9,9 @@ Remove the app's manifests from Git and learn that ArgoCD does **not** delete cl
 1. Delete the manifests from your local clone:
    ```bash
    rm apps/nginx-demo/*
+   mkdir -p apps/nginx-demo
+   touch apps/nginx-demo/.gitkeep
+   git add .
    git commit -m "Remove nginx-demo manifests"
    git push
    ```
